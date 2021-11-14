@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <!-- <img src="./images/Lets-Getaway-Logo.png" alt="Let's Getaway Logo"> -->
+    <img src="./images/Lets-Getaway-Logo.png" alt="Let's Getaway Logo">
     <h1>Let's Getaway</h1>
     <nav>
         <button>Book</button>
@@ -26,9 +26,12 @@
         <label>departure date</label>
           <input type="date" name="departure-date" id="departureDateInput" max="" class="form-fields" required>
         <label>return date</label>
-        <input type="date" name="return-date" id="returnDateInput" max="" class="form-fields" required>
+          <input type="date" name="return-date" id="returnDateInput" max="" class="form-fields" required>
         <label>number of travelers</label>
-        <input type="number" name="traveler-count" id="travelersInput" min="1" required>
+          <input type="number" name="traveler-count" id="travelersInput" min="1" required>
+        <label>where to?</label>
+          <select name="destination-options" id="destinationOptions" required>
+          <option value="0" required>choose a destination</option>
         <button>
           Let's go!
         </button>
