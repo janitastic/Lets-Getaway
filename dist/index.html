@@ -8,11 +8,33 @@
 </head>
 <body>
   <header>
-    <img src="./images/Lets-Getaway-Logo.png" alt="Let's Getaway Logo">
+    <!-- <img src="./images/Lets-Getaway-Logo.png" alt="Let's Getaway Logo"> -->
+    <h1>Let's Getaway</h1>
     <nav>
-      <ul></ul>
+        <button>Book</button>
+        <button>Pending</button>
+        <button>Upcoming</button>
+        <button>Current</button>
+        <button>Past</button>
     </nav>
   </header>
+  <main>
+    <!-- <img src="https://static.wixstatic.com/media/4c3814_9d20e8127df6495c8aa2f89540d15fd4f000.jpg/v1/fill/w_1558,h_683,al_c,q_85,usm_0.33_1.00_0.00/4c3814_9d20e8127df6495c8aa2f89540d15fd4f000.webp" alt="Aerial beach view" class="main-hero"> -->
+<!-- BOOKING PAGE -->
+    <!-- <section class="booking-section"> -->
+      <form class="booking-form">
+        <label>departure date</label>
+          <input type="date" name="departure-date" id="departureDateInput" max="" class="form-fields" required>
+        <label>return date</label>
+        <input type="date" name="return-date" id="returnDateInput" max="" class="form-fields" required>
+        <label>number of travelers</label>
+        <input type="number" name="traveler-count" id="travelersInput" min="1" required>
+        <button>
+          Let's go!
+        </button>
+      </form>
+    <!-- </section> -->
+  </main>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
 
