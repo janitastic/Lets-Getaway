@@ -3,6 +3,10 @@
 @import '_reset';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+@mixin transform($translate, $rotate) {
+  transform: translateY($translate) rotateZ($rotate);
+}
+
 * {
   font-family: $primary-font;
 }
@@ -85,6 +89,71 @@ label {
 input, select {
   margin: 2% 0 10% 0;
   color: $medium-teal;
-  background-color: #off-white;
   font-size: 1em;
+  width: 100%;
+}
+
+.hamburger {
+  &:hover {
+    cursor: pointer;
+
+    .hamburger-line {
+      background-color: $dark-teal;
+    }
+  }
+}
+
+.hamburger-line {
+  display: block;
+  height: 5px;
+  width: 50px;
+  background-color: $off-white;
+  border-radius: 5px;
+  margin: 10px auto;
+  transition: all ease 300ms;
+}
+
+.rotate1 {
+  @include transform(15px, 45deg);
+}
+
+.rotate2 {
+  @include transform(-15px, -45deg);
+}
+
+
+@media only screen and (max-width: 1068px) {
+  nav,
+  main {
+    flex-wrap: wrap;
+  }
+
+  .booking-form {
+    margin: 20% 0;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  nav,
+  main {
+    flex-wrap: wrap;
+  }
+
+  .booking-form {
+    margin: 20% 0;
+    width: 90%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  nav,
+  main {
+    flex-wrap: wrap;
+  }
+
+  .booking-form {
+    margin: 20% 0;
+    width: 90%;
+  }
 }

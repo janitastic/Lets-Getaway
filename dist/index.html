@@ -10,33 +10,51 @@
   <header>
     <img src="./images/Lets-Getaway-Logo.png" alt="Let's Getaway Logo">
     <h1>Let's Getaway</h1>
-    <nav>
-        <button>Book</button>
-        <button>Pending</button>
-        <button>Upcoming</button>
-        <button>Current</button>
-        <button>Past</button>
+    <nav class="menu-buttons">
+        <button title="Book A Trip">Book</button>
+        <button title="View Pending Trips">Pending</button>
+        <button title="View Upcoming Trips">Upcoming</button>
+        <button title="Your Current Trip">Current</button>
+        <button title="View Past Trips">Past</button>
     </nav>
+    <!-- <div class="hamburger-menu">
+      <span class="hamburger-line line-1"></span>
+      <span class="hamburger-line line-2"></span>
+      <span class="hamburger-line line-3"></span>
+    </div> -->
   </header>
-  <main>
-    <!-- <img src="https://static.wixstatic.com/media/4c3814_9d20e8127df6495c8aa2f89540d15fd4f000.jpg/v1/fill/w_1558,h_683,al_c,q_85,usm_0.33_1.00_0.00/4c3814_9d20e8127df6495c8aa2f89540d15fd4f000.webp" alt="Aerial beach view" class="main-hero"> -->
+  <main id="bookDisplay">
 <!-- BOOKING PAGE -->
-    <!-- <section class="booking-section"> -->
-      <form class="booking-form">
-        <label>departure date</label>
-          <input type="date" name="departure-date" id="departureDateInput" max="" class="form-fields" required>
-        <label>return date</label>
-          <input type="date" name="return-date" id="returnDateInput" max="" class="form-fields" required>
-        <label>number of travelers</label>
-          <input type="number" name="traveler-count" id="travelersInput" min="1" required>
-        <label>where to?</label>
-          <select name="destination-options" id="destinationOptions" required>
-          <option value="0" required>choose a destination</option>
-        <button>
-          Let's go!
-        </button>
-      </form>
-    <!-- </section> -->
+    <form class="booking-form">
+      <label>departure date<br>
+        <input type="date" name="departure-date" id="departureDateInput" max="" class="form-fields" required>
+      </label>
+      <label>return date<br>
+        <input type="date" name="return-date" id="returnDateInput" max="" class="form-fields" required>
+      </label>
+      <label>number of travelers<br>
+        <input type="number" name="traveler-count" id="travelersInput" min="1" required>
+      </label>
+      <label>where to?<br>
+        <select name="destination-options" id="destinationOptions" required>
+        <option value="0" required>choose a destination</option>
+      </label>
+      <button>
+        Let's go!
+      </button>
+    </form>
+  </main>
+  <!-- PENDING TRIPS PAGE -->
+  <main id="pendingDisplay">
+  </main>
+  <!-- UPCOMING TRIPS PAGE -->
+  <main id="upcomingDisplay">
+  </main>
+  <!-- CURRENT TRIPS PAGE -->
+  <main id="currentDisplay">
+  </main>
+  <!-- PAST TRIPS PAGE -->
+  <main id="pastDisplay">
   </main>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
