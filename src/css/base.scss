@@ -61,6 +61,16 @@ button {
   }
 }
 
+.submit {
+  background-color: $medium-teal;
+  color: $off-white;
+  padding: 2%;
+
+  &:hover {
+    background-color: $dark-teal;
+  }
+}
+
 main {
   text-align: center;
   padding: 20%;
@@ -91,6 +101,10 @@ input, select {
   color: $medium-teal;
   font-size: 1em;
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .hamburger {

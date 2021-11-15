@@ -33,31 +33,35 @@
         <input type="date" name="return-date" id="returnDateInput" max="" class="form-fields" required>
       </label>
       <label>number of travelers<br>
-        <input type="number" name="traveler-count" id="travelersInput" min="1" required>
+        <input type="number" name="traveler-count" id="travelersInput" min="1" placeholder="total including you" title="total travelers including you"required>
       </label>
       <label>where to?<br>
-        <select name="destination-options" id="destinationOptions" required>
-        <option value="0" required>choose a destination</option>
+        <select name="destination-options" id="destinationOptions" title="choose a destination" required>
+          <option value="0" required>choose a destination</option>
+        </select>
       </label>
-      <button>
+      <button class="submit">
         Let's go!
       </button>
     </form>
   </main>
   <!-- PENDING TRIPS PAGE -->
-  <main id="pendingDisplay">
+  <main class="pending hidden" id="pendingDisplay">
+    <section>
+      <article>
+      </article>
+    </section>
   </main>
   <!-- UPCOMING TRIPS PAGE -->
-  <main id="upcomingDisplay">
+  <main class="pending hidden" id="upcomingDisplay">
   </main>
   <!-- CURRENT TRIPS PAGE -->
-  <main id="currentDisplay">
+  <main class="pending hidden" id="currentDisplay">
   </main>
   <!-- PAST TRIPS PAGE -->
-  <main id="pastDisplay">
+  <main class="pending hidden" id="pastDisplay">
   </main>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
-
 </body>
 </html>
