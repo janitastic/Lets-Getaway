@@ -39,11 +39,31 @@ nav {
   justify-content: center;
 }
 
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
 h1 {
   font-family: $primary-font;
   font-size: 3em;
   color: $off-white;
   margin: 2%;
+}
+
+.spent {
+  width: 20%;
+  text-align: center;
+}
+
+.total-spent {
+  color: $off-white;
+  font-family: $primary-font;
+  font-size: 1.2em;
 }
 
 h2 {

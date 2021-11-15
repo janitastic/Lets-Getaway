@@ -8,8 +8,14 @@
 </head>
 <body>
   <header>
-    <img src="./images/Lets-Getaway-Logo.png" alt="Let's Getaway Logo">
-    <h1>Let's Getaway</h1>
+    <section class="logo">
+      <!-- <img src="./images/Lets-Getaway-Logo.png" alt="Let's Getaway Logo"> -->
+      <h1>Let's Getaway</h1>
+      <div class="spent">
+        <h3 class="total-spent">Total Spent this Year</h3>
+        <span class="total-spent" id="yearTotal">$3,045</span>
+      </div>
+    </section>
     <nav class="menu-buttons">
         <button title="Book A Trip">Book</button>
         <button title="View Pending Trips">Pending</button>
@@ -46,7 +52,7 @@
     </form>
   </main>
   <!-- PENDING TRIPS PAGE -->
-  <main class="card-displays" id="pendingDisplay">
+  <main class="card-displays pending" id="pendingDisplay">
     <h2>Pending Trips</h2>
     <section class="trip-cards">
       <article class="card">
@@ -112,13 +118,13 @@
     </section>
   </main>
   <!-- UPCOMING TRIPS PAGE -->
-  <main class="pending hidden" id="upcomingDisplay">
+  <main class="card-displays upcoming hidden" id="upcomingDisplay">
   </main>
   <!-- CURRENT TRIPS PAGE -->
-  <main class="pending hidden" id="currentDisplay">
+  <main class="card-displays current hidden" id="currentDisplay">
   </main>
   <!-- PAST TRIPS PAGE -->
-  <main class="pending hidden" id="pastDisplay">
+  <main class="card-displays past hidden" id="pastDisplay">
   </main>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
   <script src="bundle.js"></script>
