@@ -3,18 +3,23 @@
 @import '_reset';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-  font-family: $primary-font;
+@mixin transform($translate, $rotate) {
+  transform: translateY($translate) rotateZ($rotate);
 }
 
-body, html {
+* {
+  font-family: $primary-font;
+  color: $dark-teal;
+}
+
+body {
   // background: $off-white;
   // background-repeat: no-repeat;
   height: 100%;
   // text-align: center;
   // width: 100vw;
-  // height: 100vh;
-  background-image: url(https://static.wixstatic.com/media/4c3814_9d20e8127df6495c8aa2f89540d15fd4f000.jpg/v1/fill/w_1558,h_683,al_c,q_85,usm_0.33_1.00_0.00/4c3814_9d20e8127df6495c8aa2f89540d15fd4f000.webp);
+  margin: 0%;
+  background-image: url(https://images.pexels.com/photos/1705253/pexels-photo-1705253.jpeg?cs=srgb&dl=pexels-damon-hall-1705253.jpg&fm=jpg);
   // object-fit: cover;
   // object-position: 50% 50%;
   background-size: cover;
@@ -22,7 +27,7 @@ body, html {
 }
 
 header {
-  background-color: transparent;
+  background-color: $opaque-teal;
   color: $off-white;
   float: left;
   width: 100%;
@@ -34,10 +39,45 @@ nav {
   justify-content: center;
 }
 
+.logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-between;
+  align-items: center;
+}
+
 h1 {
   font-family: $primary-font;
   font-size: 3em;
+  color: $off-white;
   margin: 2%;
+}
+
+.spent {
+  width: 20%;
+  text-align: center;
+}
+
+.total-spent {
+  color: $off-white;
+  font-family: $primary-font;
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 2em;
+  margin: 2% 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 4%;
+}
+
+p {
+  padding: 1% 0;
 }
 
 button {
@@ -47,19 +87,35 @@ button {
   border-radius: 100px;
   font-size: 1.2em;
   border: 1px solid $medium-teal;
-  background-color: $off-white;
+  background-color: $opaque-white;
   color: $dark-teal;
 
   &:hover {
-    background-color: $light-teal;
+    background-color: $medium-teal;
     color: $off-white;
-    border: 1px solid $light-teal;
+    border: 1px solid $medium-teal;
+  }
+}
+
+.submit {
+  background-color: $medium-teal;
+  color: $off-white;
+  padding: 2%;
+
+  &:hover {
+    background-color: $dark-teal;
   }
 }
 
 main {
   text-align: center;
   padding: 20%;
+}
+
+.card-displays {
+  background-color: $opaque-white;
+  text-align: left;
+  padding: 20% 10%;
 }
 
 .booking-section {
@@ -72,6 +128,130 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: $opacity-white;
+  background-color: $opaque-white;
   padding: 10%;
+  width: 40%;
+}
+
+.trip-cards {
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 25% 25% 25% 25%;
+  align-items: center;
+}
+
+.card {
+  // border: solid 1px $dark-teal;
+  border-radius: .5em;
+  font-size: 1em;
+  background-color: $opaque-white;
+  box-shadow: 1px 1px 7px black;
+}
+
+.trip-image {
+  width: 100%;
+}
+
+.card-text {
+  margin: 4%;
+}
+
+label {
+  color: $dark-teal;
+  font-size: 1.2em;
+}
+
+input, select {
+  margin: 2% 0 10% 0;
+  color: $medium-teal;
+  font-size: 1em;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+// .hamburger {
+//   &:hover {
+//     cursor: pointer;
+//
+//     .hamburger-line {
+//       background-color: $dark-teal;
+//     }
+//   }
+// }
+//
+// .hamburger-line {
+//   display: block;
+//   height: 5px;
+//   width: 50px;
+//   background-color: $off-white;
+//   border-radius: 5px;
+//   margin: 10px auto;
+//   transition: all ease 300ms;
+// }
+//
+// .rotate1 {
+//   @include transform(15px, 45deg);
+// }
+//
+// .rotate2 {
+//   @include transform(-15px, -45deg);
+// }
+
+
+// MEDIA QUERIES
+
+//table
+@media only screen and (max-width: 1068px) {
+  nav,
+  main {
+    flex-wrap: wrap;
+  }
+
+  .booking-form {
+    margin: 20% 0;
+    width: 90%;
+  }
+
+  .trip-cards {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  nav,
+  main {
+    flex-wrap: wrap;
+  }
+
+  .booking-form {
+    margin: 20% 0;
+    width: 90%;
+  }
+
+  .trip-cards {
+    grid-template-columns: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  nav,
+  main {
+    flex-wrap: wrap;
+  }
+
+  h2 {
+    padding-top: 30%;
+  }
+
+  .booking-form {
+    margin: 20% 0;
+    width: 90%;
+  }
+
+  .trip-cards {
+    grid-template-columns: 100%;
+  }
 }
